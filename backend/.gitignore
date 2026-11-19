@@ -1,0 +1,9 @@
+target/
+src/main/resources/application.properties
+src/main/resources/application.yml
+uploads/
+pdfs/
+*.log
+.idea/
+.vscode/
+.env
