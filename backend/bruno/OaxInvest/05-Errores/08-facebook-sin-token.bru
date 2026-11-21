@@ -1,0 +1,21 @@
+meta {
+  name: ERROR 400: Facebook sin token
+  type: http
+  seq: 8
+}
+
+post {
+  url: {{baseUrl}}/api/auth/facebook
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "accessToken": ""
+  }
+}
+
+assert {
+  res.status: eq 400
+}

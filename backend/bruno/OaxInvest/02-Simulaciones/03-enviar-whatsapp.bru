@@ -1,0 +1,25 @@
+meta {
+  name: Enviar resultado por WhatsApp
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{baseUrl}}/api/simulations/1/send-whatsapp
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "phone": "+529511234567"
+  }
+}
+
+assert {
+  res.status: eq 200
+}

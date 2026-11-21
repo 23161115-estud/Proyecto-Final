@@ -1,0 +1,22 @@
+meta {
+  name: ERROR 401: contraseña incorrecta
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/api/auth/login
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "email": "ana@test.com",
+    "password": "Incorrecta#1"
+  }
+}
+
+assert {
+  res.status: eq 401
+}

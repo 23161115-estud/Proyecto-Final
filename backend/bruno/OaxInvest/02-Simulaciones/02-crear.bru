@@ -1,0 +1,38 @@
+meta {
+  name: Crear simulación (login cliente primero)
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{baseUrl}}/api/simulations
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "neighborhoodId": 1,
+    "landWidth": 10,
+    "landLength": 20,
+    "numApartments": 10,
+    "constructionCostPerM2": 1500,
+    "monthlyRentPerApartment": 800,
+    "fixedMonthlyExpenses": 1000,
+    "amenityIds": [1, 3]
+  }
+}
+
+assert {
+  res.status: eq 201
+}
+
+tests {
+  test("calcula semáforo", function() {
+    expect(["VERDE","AMARILLO","ROJO"]).to.include(res.body.semaphore);
+  });
+}

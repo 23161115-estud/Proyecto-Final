@@ -1,0 +1,23 @@
+meta {
+  name: ERROR 422: correo ya registrado
+  type: http
+  seq: 6
+}
+
+post {
+  url: {{baseUrl}}/api/auth/register
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "name": "Ana Repetida",
+    "email": "ana@test.com",
+    "password": "Cliente#2026"
+  }
+}
+
+assert {
+  res.status: eq 422
+}

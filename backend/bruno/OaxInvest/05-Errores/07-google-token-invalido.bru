@@ -1,0 +1,23 @@
+meta {
+  name: ERROR 401: token de Google falso
+  type: http
+  seq: 7
+}
+
+post {
+  url: {{baseUrl}}/api/auth/google
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "idToken": "token.falso.de.prueba"
+  }
+}
+
+tests {
+  test("rechaza el token falso", function() {
+    expect([401, 422]).to.include(res.status);
+  });
+}

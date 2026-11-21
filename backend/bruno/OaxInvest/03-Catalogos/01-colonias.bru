@@ -1,0 +1,19 @@
+meta {
+  name: Colonias paginadas
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/api/neighborhoods?page=0&size=5&q=a
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+assert {
+  res.status: eq 200
+}

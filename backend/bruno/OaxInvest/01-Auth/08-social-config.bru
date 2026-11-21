@@ -1,0 +1,22 @@
+meta {
+  name: IDs publicos de Google y Facebook
+  type: http
+  seq: 8
+}
+
+get {
+  url: {{baseUrl}}/api/auth/social-config
+  body: none
+  auth: none
+}
+
+assert {
+  res.status: eq 200
+}
+
+tests {
+  test("devuelve las claves de configuracion", function() {
+    expect(res.body).to.have.property("googleClientId");
+    expect(res.body).to.have.property("facebookAppId");
+  });
+}

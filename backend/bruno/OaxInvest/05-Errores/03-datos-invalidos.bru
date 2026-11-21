@@ -1,0 +1,29 @@
+meta {
+  name: ERROR 400: datos inválidos (Bean Validation)
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{baseUrl}}/api/auth/register
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "name": "",
+    "email": "no-es-correo",
+    "password": "123"
+  }
+}
+
+assert {
+  res.status: eq 400
+}
+
+tests {
+  test("trae errores por campo", function() {
+    expect(res.body.errors.password).to.be.a("string");
+  });
+}

@@ -1,0 +1,19 @@
+meta {
+  name: ERROR 404: simulación inexistente (login cliente primero)
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{baseUrl}}/api/simulations/999999
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+assert {
+  res.status: eq 404
+}
