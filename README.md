@@ -5,10 +5,10 @@ Aplicación web full stack que simula la rentabilidad de construir departamentos
 ## Enlaces
 | | |
 |---|---|
-| Proyecto desplegado (HTTPS) | `https://TU-DOMINIO.com` |
-| URL base de la API | `https://TU-DOMINIO.com/api` |
-| Prototipo de Figma | `PEGA_AQUI` |
-| Tablero de GitHub Projects | `PEGA_AQUI` |
+| Proyecto desplegado (HTTPS) | `https://oaxinvest.shop/` |
+| URL base de la API | `https://oaxinvest.shop/api` |
+| Prototipo de Figma | `https://www.figma.com/proto/UM16Qu0yCHme1kqCWRKT5Y/Untitled?node-id=2-55&p=f&t=OK25MJgvcg6NKo7j-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=2%3A55&show-proto-sidebar=1` |
+| Tablero de GitHub Projects | `https://github.com/users/23161115-estud/projects/5` |
 | Repositorio | https://github.com/23161115-estud/Proyecto-Final |
 
 ## Equipo
