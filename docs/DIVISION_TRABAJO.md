@@ -35,9 +35,6 @@ Cada quien es dueño de **cortes completos** del sistema (base de datos, backend
 - Despliegue final y ensayo de la demostración.
 - Los dos deben poder explicar cualquier parte del sistema en la defensa.
 
-## Plan de commits
-La subida del proyecto está repartida en 30 commits (15 por integrante) con una cantidad de líneas casi igual. El detalle y el script están en [`PLAN_DE_COMMITS.md`](PLAN_DE_COMMITS.md).
-
 ## Cómo trabajar en Git
 1. Cada integrante configura su propia identidad en su computadora:
    ```bash
