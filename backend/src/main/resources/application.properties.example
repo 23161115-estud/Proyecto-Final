@@ -46,6 +46,19 @@ app.twilio.sms-from=
 # Sandbox de WhatsApp de Twilio: whatsapp:+14155238886
 app.twilio.whatsapp-from=whatsapp:+14155238886
 
+# --- WhatsApp: proveedor (twilio | meta) ---
+app.whatsapp.provider=twilio
+# WhatsApp Cloud API de Meta (solo si el proveedor es meta)
+app.meta.whatsapp.token=
+app.meta.whatsapp.phone-number-id=
+app.meta.whatsapp.api-version=v21.0
+# Dejar vacío para texto libre (requiere que el destinatario haya escrito al número de prueba en las últimas 24 h).
+# Para la plantilla de prueba de Meta usar: hello_world
+app.meta.whatsapp.template=
+app.meta.whatsapp.template-lang=en_US
+# Si Meta responde 131030 aunque el número esté en la lista permitida, probar true (52 1XXXXXXXXXX)
+app.meta.whatsapp.mx-add-1=false
+
 # --- Inicio de sesion con Google y Facebook (opcional; el boton se oculta si queda vacio) ---
 # Google: Google Cloud Console > APIs y servicios > Credenciales > ID de cliente OAuth (Aplicacion web)
 app.google.client-id=
@@ -56,3 +69,9 @@ app.facebook.app-secret=
 # --- OpenAI (opcional; si queda vacio se usa un analisis local de respaldo) ---
 app.openai.api-key=
 app.openai.model=gpt-4o-mini
+
+# --- IA: proveedor (openai | gemini). Si la clave del proveedor elegido queda vacia se usa el analisis local ---
+app.ai.provider=openai
+# Gemini con clave de Google AI Studio (solo si el proveedor es gemini)
+app.gemini.api-key=
+app.gemini.model=gemini-4-hydrogen
